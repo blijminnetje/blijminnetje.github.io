@@ -6,80 +6,84 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     body {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto;
-      background: linear-gradient(180deg, #0b0f14 0%, #0f172a 100%);
-      color: #e6edf3;
-      line-height: 1.6;
-    }
-    a { color: #58a6ff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto;
+  background: #f8fafc;            /* off-white */
+  color: #1f2937;                 /* slate text */
+  line-height: 1.65;
+}
 
-    .container {
-      max-width: 900px;
-      margin: auto;
-      padding: 48px 20px;
-    }
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
 
-    nav {
-      position: sticky;
-      top: 0;
-      background: #0b0f14;
-      border-bottom: 1px solid #30363d;
-      padding: 12px 20px;
-    }
+.container {
+  max-width: 920px;
+  margin: auto;
+  padding: 56px 24px;
+}
 
-    nav a {
-      margin-right: 16px;
-      font-weight: 600;
-    }
+nav {
+  position: sticky;
+  top: 0;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 14px 24px;
+  z-index: 10;
+}
 
-    h1 {
-      font-size: 42px;
-      margin-bottom: 6px;
-    }
+nav a {
+  margin-right: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
 
-    h2 {
-      margin-top: 56px;
-      border-bottom: 1px solid #30363d;
-      padding-bottom: 6px;
-    }
+h1 {
+  font-size: 44px;
+  margin-bottom: 6px;
+}
 
-    .card {
-      border: 1px solid #30363d;
-      border-radius: 12px;
-      padding: 16px;
-      margin-top: 16px;
-      background: #0d1117;
-    }
+h2 {
+  margin-top: 64px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 8px;
+  font-weight: 600;
+}
 
-    footer {
-      margin-top: 72px;
-      font-size: 14px;
-      color: #8b949e;
-    }
-/* Light card for About / sections */
+p {
+  color: #374151;
+}
+
+.card,
 .section-card {
-  background: #111827;            /* slightly lighter than page */
-  border: 1px solid #374151;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
   border-radius: 16px;
   padding: 28px 32px;
   margin-top: 24px;
 }
 
 .section-card p {
-  font-size: 16.5px;
+  font-size: 17px;
   line-height: 1.75;
-  color: #e5e7eb;
 }
 
-/* Accent divider */
 .accent-line {
   width: 48px;
   height: 4px;
-  background: linear-gradient(90deg, #38bdf8, #22c55e);
+  background: linear-gradient(90deg, #2563eb, #10b981);
   border-radius: 999px;
-  margin: 12px 0 20px 0;
+  margin-bottom: 20px;
+}
+
+footer {
+  margin-top: 80px;
+  font-size: 14px;
+  color: #6b7280;
 }
 
     
