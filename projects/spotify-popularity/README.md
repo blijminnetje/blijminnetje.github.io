@@ -20,3 +20,5 @@ Designed the modeling pipeline, evaluated multiple algorithms, and interpreted r
 ## Outcome
 Identified features most strongly associated with song popularity and compared predictive model performance.
 
+📄 Full technical report:  
+https://github.com/blijminnetje/blijminnetje.github.io/blob/main/reports/Spotify_Song_Popularity_ML.pdf
