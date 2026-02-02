@@ -20,3 +20,5 @@ Developed optimization models, ran simulations, analyzed utilization outcomes, a
 ## Outcome
 Provided recommendations to improve freezer throughput and operational efficiency under varying demand scenarios.
 
+📄 Full technical report:  
+https://github.com/blijminnetje/blijminnetje.github.io/blob/main/reports/Blast_Freezer_Optimization_Report.pdf
