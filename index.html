@@ -85,7 +85,98 @@ footer {
   font-size: 14px;
   color: #6b7280;
 }
+/* ---------- HERO ---------- */
+.hero-accent {
+  width: 64px;
+  height: 5px;
+  background: linear-gradient(90deg, #2563eb, #10b981);
+  border-radius: 999px;
+  margin: 14px 0 22px 0;
+}
 
+/* ---------- NAV PILLS ---------- */
+nav a {
+  padding: 6px 12px;
+  border-radius: 999px;
+  transition: background 0.2s;
+}
+nav a:hover {
+  background: #f1f5f9;
+  text-decoration: none;
+}
+
+/* ---------- TWO COLUMN ---------- */
+.two-col {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 32px;
+}
+@media (max-width: 900px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- PROJECT CARDS ---------- */
+.project-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.project-card img {
+  width: 180px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.project-links a {
+  margin-right: 14px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* ---------- ICON HEADERS ---------- */
+.icon-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ---------- TIMELINE ---------- */
+.timeline {
+  position: relative;
+  margin-top: 32px;
+  padding-left: 32px;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: #e5e7eb;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -3px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  background: #2563eb;
+  border-radius: 50%;
+}
     
   </style>
 </head>
@@ -103,48 +194,96 @@ footer {
 <div class="container">
 
   <h1>Min Nguyen</h1>
-  <p>Data Analytics • Machine Learning • Optimization & Simulation</p>
+<div class="hero-accent"></div>
+<p>Data Science • Business Analytics • Machine Learning</p>
+
+
+  <!-- TIMELINE -->
+  <h2 class="icon-title">🧭 Experience</h2>
+
+<div class="timeline">
+
+  <div class="timeline-item">
+    <div class="section-card">
+      <strong>Program Advisor — VCU</strong><br>
+      <em>2024 – Present</em>
+      <p>
+        Supported enrollment operations, data tracking, and reporting for
+        international programs, improving administrative efficiency.
+      </p>
+    </div>
+  </div>
+
+  <div class="timeline-item">
+    <div class="section-card">
+      <strong>Financial Services Associate — Wells Fargo</strong><br>
+      <em>2023 – 2024</em>
+      <p>
+        Worked with financial data, customer analytics, and compliance-driven
+        processes in a high-volume environment.
+      </p>
+    </div>
+  </div>
+
+</div>
 
   <!-- BACKGROUND -->
-  <h2 id="background">About Me</h2>
+  <h2 id="background" class="icon-title">👋 About Me</h2>
 
-<div class="section-card">
-  <div class="accent-line"></div>
+<div class="two-col section-card">
+  <div>
+    <p>
+      I am a <strong>Data Science graduate</strong> with a background in
+      <strong>International Business</strong>, bridging technical analytics
+      with real-world business context.
+    </p>
 
-  <p>
-    I am a <strong>Data Science graduate</strong> with a background in
-    <strong>International Business</strong>, bridging technical analytics
-    with real-world business context.
-  </p>
+    <p>
+      My work spans <strong>data analysis, machine learning, optimization,
+      and simulation</strong>, with a focus on transforming complex data into
+      actionable insights that support business and operational decisions.
+    </p>
+  </div>
 
-  <p>
-    My work spans <strong>data analysis, machine learning, optimization,
-    and simulation</strong>, with a focus on transforming complex data into
-    clear, actionable insights that support business and operational
-    decision-making.
-  </p>
-
-  <p>
-    I enjoy projects where analytics directly informs strategy, improves
-    efficiency, or enables smarter decisions across teams.
-  </p>
+  <div>
+    <p><strong>Core Skills</strong></p>
+    <p>
+      Python · SQL · R<br>
+      pandas · scikit-learn<br>
+      Optimization · Simulation<br>
+      Tableau · Power BI
+    </p>
+  </div>
 </div>
 
 
+
   <!-- PROJECTS -->
-  <h2 id="projects">Projects</h2>
+  <h2 id="projects" class="icon-title">📊 Projects</h2>
 
-  <div class="card">
-    <h3>Spotify Popularity Prediction</h3>
-    <p>Built and compared multiple models to predict song popularity using audio features.</p>
-    <a href="#">GitHub Repo →</a>
+<div class="card">
+  <h3>Spotify Popularity Prediction</h3>
+  <p>
+    Built and compared multiple machine learning models to predict song
+    popularity using audio features.
+  </p>
+  <div class="project-links">
+    <a href="./projects/spotify.html">View Project →</a>
   </div>
+</div>
 
-  <div class="card">
-    <h3>Blast Freezer Simulation & Optimization</h3>
-    <p>Monte Carlo simulation connected to an optimizer to improve freezer utilization.</p>
-    <a href="#">GitHub Repo →</a>
+<div class="card">
+  <h3>Blast Freezer Simulation & Optimization</h3>
+  <p>
+    Monte Carlo simulation integrated with an optimizer to improve freezer
+    utilization and scheduling decisions.
+  </p>
+  <div class="project-links">
+    <a href="./projects/freezer.html">View Project →</a>
   </div>
+</div>
+
+
 
   <!-- REPORTS -->
   <h2 id="reports">Reports</h2>
@@ -175,3 +314,23 @@ footer {
 </body>
 </html>
 
+<h2 class="icon-title">📄 Reports</h2>
+<h2 class="icon-title">🎓 Certificates</h2>
+<h2 class="icon-title">📬 Contact</h2>
+
+/* ---------- HOVER EFFECTS ---------- */
+.card,
+.section-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover,
+.section-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.project-links a:hover {
+  text-decoration: none;
+  border-bottom: 2px solid #2563eb;
+}
