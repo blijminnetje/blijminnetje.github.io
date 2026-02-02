@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto;
-      background: #0b0f14;
+      background: linear-gradient(180deg, #0b0f14 0%, #0f172a 100%);
       color: #e6edf3;
       line-height: 1.6;
     }
@@ -58,6 +58,31 @@
       font-size: 14px;
       color: #8b949e;
     }
+/* Light card for About / sections */
+.section-card {
+  background: #111827;            /* slightly lighter than page */
+  border: 1px solid #374151;
+  border-radius: 16px;
+  padding: 28px 32px;
+  margin-top: 24px;
+}
+
+.section-card p {
+  font-size: 16.5px;
+  line-height: 1.75;
+  color: #e5e7eb;
+}
+
+/* Accent divider */
+.accent-line {
+  width: 48px;
+  height: 4px;
+  background: linear-gradient(90deg, #38bdf8, #22c55e);
+  border-radius: 999px;
+  margin: 12px 0 20px 0;
+}
+
+    
   </style>
 </head>
 
@@ -77,14 +102,30 @@
   <p>Data Analytics • Machine Learning • Optimization & Simulation</p>
 
   <!-- BACKGROUND -->
-  <h2 id="background">Background</h2>
-  <p>
-    I am a Data Science graduate with a background in International Business.
-I specialize in data analysis, machine learning, optimization, and simulation,
-with a focus on turning complex data into actionable insights for business and
-operational decision-making.
+  <h2 id="background">About Me</h2>
 
+<div class="section-card">
+  <div class="accent-line"></div>
+
+  <p>
+    I am a <strong>Data Science graduate</strong> with a background in
+    <strong>International Business</strong>, bridging technical analytics
+    with real-world business context.
   </p>
+
+  <p>
+    My work spans <strong>data analysis, machine learning, optimization,
+    and simulation</strong>, with a focus on transforming complex data into
+    clear, actionable insights that support business and operational
+    decision-making.
+  </p>
+
+  <p>
+    I enjoy projects where analytics directly informs strategy, improves
+    efficiency, or enables smarter decisions across teams.
+  </p>
+</div>
+
 
   <!-- PROJECTS -->
   <h2 id="projects">Projects</h2>
