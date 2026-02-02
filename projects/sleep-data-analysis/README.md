@@ -1,22 +1,16 @@
-# Sleep Data Analysis Using SAS
+# Sleep Data Regression Analysis (SAS)
 
-**Course:** Applied Linear Regression  
-**Domain:** Statistical Data Science
+**Course:** STAT 643 – Applied Linear Regression  
+**Tools:** SAS, Statistical Modeling
 
-## Objective
-Analyze sleep-related data to identify patterns and relationships using statistical modeling techniques.
+## Overview
+Conducted regression analysis on sleep-related data to examine relationships between sleep duration, demographic variables, and health indicators.
 
-## Methods
-- Data preparation in SAS
-- Linear regression modeling
-- Statistical inference and diagnostics
+## Key Contributions
+- Cleaned and prepared datasets using SAS
+- Built and evaluated linear regression models
+- Interpreted coefficients, diagnostics, and assumptions
+- Summarized findings using statistical tables and insights
 
-## Tools
-SAS
-
-## My Role
-Performed regression analysis, interpreted model outputs, and documented statistical findings in a formal report.
-
-## Outcome
-Demonstrated proficiency in SAS-based statistical analysis and applied regression techniques to real-world data.
-
+📄 **Full report:**  
+[View PDF](../../reports/STAT643_Sleep_Regression_Analysis.pdf)
