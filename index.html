@@ -177,7 +177,17 @@ nav a:hover {
   background: #2563eb;
   border-radius: 50%;
 }
-    
+/* ---------- HOVER EFFECTS ---------- */
+.card,
+.section-card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card:hover,
+.section-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}    
   </style>
 </head>
 
@@ -318,17 +328,7 @@ nav a:hover {
 <h2 class="icon-title">🎓 Certificates</h2>
 <h2 class="icon-title">📬 Contact</h2>
 
-/* ---------- HOVER EFFECTS ---------- */
-.card,
-.section-card {
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
 
-.card:hover,
-.section-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-}
 
 .project-links a:hover {
   text-decoration: none;
