@@ -2,342 +2,267 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Min Nguyen | Portfolio</title>
+  <title>Min Nguyen | Data Science Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
     body {
-  margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto;
-  background: #f8fafc;            /* off-white */
-  color: #1f2937;                 /* slate text */
-  line-height: 1.65;
-}
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto;
+      background: #f8fafc;
+      color: #1f2937;
+      line-height: 1.65;
+    }
 
-a {
-  color: #2563eb;
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: underline;
-}
+    a {
+      color: #2563eb;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
 
-.container {
-  max-width: 920px;
-  margin: auto;
-  padding: 56px 24px;
-}
+    nav {
+      position: sticky;
+      top: 0;
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 14px 24px;
+      z-index: 10;
+    }
 
-nav {
-  position: sticky;
-  top: 0;
-  background: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
-  padding: 14px 24px;
-  z-index: 10;
-}
+    nav a {
+      margin-right: 14px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      transition: background 0.2s;
+      color: #1f2937;
+    }
 
-nav a {
-  margin-right: 18px;
-  font-weight: 600;
-  color: #1f2937;
-}
+    nav a:hover {
+      background: #f1f5f9;
+      text-decoration: none;
+    }
 
-h1 {
-  font-size: 44px;
-  margin-bottom: 6px;
-}
+    .container {
+      max-width: 920px;
+      margin: auto;
+      padding: 56px 24px;
+    }
 
-h2 {
-  margin-top: 64px;
-  border-bottom: 1px solid #e5e7eb;
-  padding-bottom: 8px;
-  font-weight: 600;
-}
+    h1 {
+      font-size: 44px;
+      margin-bottom: 6px;
+    }
 
-p {
-  color: #374151;
-}
+    h2 {
+      margin-top: 64px;
+      border-bottom: 1px solid #e5e7eb;
+      padding-bottom: 8px;
+      font-weight: 600;
+    }
 
-.card,
-.section-card {
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 16px;
-  padding: 28px 32px;
-  margin-top: 24px;
-}
+    .hero-accent {
+      width: 64px;
+      height: 5px;
+      background: linear-gradient(90deg, #2563eb, #10b981);
+      border-radius: 999px;
+      margin: 14px 0 22px 0;
+    }
 
-.section-card p {
-  font-size: 17px;
-  line-height: 1.75;
-}
+    .card, .section-card {
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-top: 24px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
 
-.accent-line {
-  width: 48px;
-  height: 4px;
-  background: linear-gradient(90deg, #2563eb, #10b981);
-  border-radius: 999px;
-  margin-bottom: 20px;
-}
+    .card:hover, .section-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+    }
 
-footer {
-  margin-top: 80px;
-  font-size: 14px;
-  color: #6b7280;
-}
-/* ---------- HERO ---------- */
-.hero-accent {
-  width: 64px;
-  height: 5px;
-  background: linear-gradient(90deg, #2563eb, #10b981);
-  border-radius: 999px;
-  margin: 14px 0 22px 0;
-}
+    .two-col {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 32px;
+    }
 
-/* ---------- NAV PILLS ---------- */
-nav a {
-  padding: 6px 12px;
-  border-radius: 999px;
-  transition: background 0.2s;
-}
-nav a:hover {
-  background: #f1f5f9;
-  text-decoration: none;
-}
+    @media (max-width: 900px) {
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
 
-/* ---------- TWO COLUMN ---------- */
-.two-col {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 32px;
-}
-@media (max-width: 900px) {
-  .two-col {
-    grid-template-columns: 1fr;
-  }
-}
+    .timeline {
+      position: relative;
+      margin-top: 32px;
+      padding-left: 32px;
+    }
 
-/* ---------- PROJECT CARDS ---------- */
-.project-card {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-}
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 8px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #e5e7eb;
+    }
 
-.project-card img {
-  width: 180px;
-  height: 120px;
-  object-fit: cover;
-  border-radius: 12px;
-  border: 1px solid #e5e7eb;
-}
+    .timeline-item {
+      position: relative;
+      margin-bottom: 32px;
+    }
 
-.project-links a {
-  margin-right: 14px;
-  font-weight: 600;
-  font-size: 14px;
-}
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -3px;
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      background: #2563eb;
+      border-radius: 50%;
+    }
 
-/* ---------- ICON HEADERS ---------- */
-.icon-title {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-/* ---------- TIMELINE ---------- */
-.timeline {
-  position: relative;
-  margin-top: 32px;
-  padding-left: 32px;
-}
-
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 8px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: #e5e7eb;
-}
-
-.timeline-item {
-  position: relative;
-  margin-bottom: 32px;
-}
-
-.timeline-item::before {
-  content: "";
-  position: absolute;
-  left: -3px;
-  top: 6px;
-  width: 14px;
-  height: 14px;
-  background: #2563eb;
-  border-radius: 50%;
-}
-/* ---------- HOVER EFFECTS ---------- */
-.card,
-.section-card {
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.card:hover,
-.section-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-}    
-
-.project-links a:hover {
-  text-decoration: none;
-  border-bottom: 2px solid #2563eb;
-}
-.icon-title {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
+    footer {
+      margin-top: 80px;
+      font-size: 14px;
+      color: #6b7280;
+    }
   </style>
 </head>
 
 <body>
 
 <nav>
-  <a href="#background">Background</a>
+  <a href="#about">About</a>
+  <a href="#experience">Experience</a>
   <a href="#projects">Projects</a>
   <a href="#reports">Reports</a>
   <a href="#resume">Resume</a>
-  <a href="#certificates">Certificates</a>
+  <a href="#contact">Contact</a>
 </nav>
 
 <div class="container">
 
+  <!-- HERO -->
   <h1>Min Nguyen</h1>
-<div class="hero-accent"></div>
-<p>Data Science • Business Analytics • Machine Learning</p>
+  <div class="hero-accent"></div>
+  <p>Data Science • Business Analytics • Machine Learning</p>
 
-  
-
-  <!-- TIMELINE -->
-  <h2 class="icon-title">🧭 Experience</h2>
-
-<div class="timeline">
-
-  <div class="timeline-item">
-    <div class="section-card">
-      <strong>Program Advisor — VCU</strong><br>
-      <em>2024 – Present</em>
+  <!-- ABOUT -->
+  <h2 id="about">👋 About Me</h2>
+  <div class="two-col section-card">
+    <div>
       <p>
-        Supported enrollment operations, data tracking, and reporting for
-        international programs, improving administrative efficiency.
+        I am a <strong>Data Science graduate student</strong> with a background in
+        <strong>International Business</strong>, combining analytical rigor with
+        real-world business and financial context.
+      </p>
+      <p>
+        My work focuses on <strong>machine learning, statistical analysis,
+        optimization, and simulation</strong>, with an emphasis on turning complex
+        data into actionable insights for operational and financial decision-making.
+      </p>
+    </div>
+
+    <div>
+      <p><strong>Core Skills</strong></p>
+      <p>
+        Python · SQL · R · SAS<br>
+        pandas · scikit-learn<br>
+        Optimization · Simulation<br>
+        Data Analysis & Reporting
       </p>
     </div>
   </div>
 
-  <div class="timeline-item">
-    <div class="section-card">
-      <strong>Financial Services Associate — Wells Fargo</strong><br>
-      <em>2023 – 2024</em>
-      <p>
-        Worked with financial data, customer analytics, and compliance-driven
-        processes in a high-volume environment.
-      </p>
+  <!-- EXPERIENCE -->
+  <h2 id="experience">🧭 Experience</h2>
+  <div class="timeline">
+
+    <div class="timeline-item">
+      <div class="section-card">
+        <strong>Business & Data Operations Manager — Kilo Hollow Energy</strong><br>
+        <em>2024 – Present</em>
+        <p>
+          Lead data-driven operations across sales, CRM, reporting, and project
+          tracking for a growing energy startup, supporting analytics-driven
+          business and operational decisions.
+        </p>
+      </div>
     </div>
-  </div>
 
-</div>
+    <div class="timeline-item">
+      <div class="section-card">
+        <strong>Program Advisor (Data & Operations) — VCU</strong><br>
+        <em>2024</em>
+        <p>
+          Analyzed enrollment and performance data to support operational reporting
+          and improve administrative efficiency through data-driven insights.
+        </p>
+      </div>
+    </div>
 
-  <!-- BACKGROUND -->
-  <h2 id="background" class="icon-title">👋 About Me</h2>
-
-<div class="two-col section-card">
-  <div>
-    <p>
-      I am a <strong>Data Science graduate</strong> with a background in
-      <strong>International Business</strong>, bridging technical analytics
-      with real-world business context.
-    </p>
-
-    <p>
-      My work spans <strong>data analysis, machine learning, optimization,
-      and simulation</strong>, with a focus on transforming complex data into
-      actionable insights that support business and operational decisions.
-    </p>
-  </div>
-
-  <div>
-    <p><strong>Core Skills</strong></p>
-    <p>
-      Python · SQL · R<br>
-      pandas · scikit-learn<br>
-      Optimization · Simulation<br>
-      Tableau · Power BI
-    </p>
-  </div>
-</div>
-
-
+   
 
   <!-- PROJECTS -->
-  <h2 id="projects" class="icon-title">📊 Projects</h2>
+  <h2 id="projects">📊 Featured Projects</h2>
 
-<div class="card">
-  <h3>Spotify Popularity Prediction</h3>
-  <p>
-    Built and compared multiple machine learning models to predict song
-    popularity using audio features.
-  </p>
-  <div class="project-links">
-    <a href="./projects/spotify.html">View Project →</a>
+  <div class="card">
+    <h3>Bank Marketing Campaign Analysis (Capstone)</h3>
+    <p>
+      Built predictive machine learning models to analyze customer response behavior
+      in bank marketing campaigns, incorporating model evaluation and explainability.
+    </p>
+    <a href="./projects/bank-marketing/" target="_blank">View Project →</a>
   </div>
-</div>
 
-<div class="card">
-  <h3>Blast Freezer Simulation & Optimization</h3>
-  <p>
-    Monte Carlo simulation integrated with an optimizer to improve freezer
-    utilization and scheduling decisions.
-  </p>
-  <div class="project-links">
-    <a href="./projects/freezer.html">View Project →</a>
+  <div class="card">
+    <h3>Credit Card Fraud Detection (Neural Networks)</h3>
+    <p>
+      Developed neural network models to detect fraudulent transactions in highly
+      imbalanced financial datasets using appropriate evaluation metrics.
+    </p>
+    <a href="./projects/credit-card-fraud/" target="_blank">View Project →</a>
   </div>
-</div>
-
-
 
   <!-- REPORTS -->
-<h2 class="icon-title">📄 Reports</h2>
+  <h2 id="reports">📄 Reports</h2>
   <div class="card">
-    <p>Project reports and technical write-ups (PDF).</p>
-    <a href="#">View Reports →</a>
+    <p>Technical reports and academic write-ups documenting data science projects.</p>
+    <a href="https://github.com/blijminnetje/blijminnetje.github.io/tree/main/reports" target="_blank">
+      View All Reports →
+    </a>
   </div>
 
   <!-- RESUME -->
-<h2 class="icon-title">📄 Resume</h2>
+  <h2 id="resume">📄 Resume</h2>
   <div class="card">
-    📄 Download Resume:  
-https://github.com/blijminnetje/blijminnetje.github.io/blob/main/resume/Min_Nguyen_Resume_Data_Science.pdf
-
+    <a href="https://raw.githubusercontent.com/blijminnetje/blijminnetje.github.io/main/resume/Min_Nguyen_Resume_Data_Science.pdf"
+       download>
+      Download Resume (PDF) →
+    </a>
   </div>
 
-  <!-- CERTIFICATES -->
-<h2 class="icon-title">🎓 Certificates</h2>
-  <div class="card">
-    <p>Professional certificates and coursework.</p>
-    <a href="#">View Certificates →</a>
+  <!-- CONTACT -->
+  <h2 id="contact">📬 Contact</h2>
+  <div class="section-card">
+    <p>
+      Email:
+      <a href="mailto:minnguyen.work@gmail.com">minnguyen.work@gmail.com</a><br>
+      LinkedIn:
+      <a href="https://linkedin.com/in/minhanh-nguyen99" target="_blank">
+        linkedin.com/in/minhanh-nguyen99
+      </a>
+    </p>
   </div>
 
-<!-- CONTACT -->
-  <h2 class="icon-title">📬 Contact</h2>
-<div class="section-card">
-  <p>
-    Email: <a href="mailto:your@email.com">minnguyen.work@email.com</a><br>
-    LinkedIn: <a href="https://linkedin.com/in/minhanh-nguyen99" target="_blank">linkedin.com/in/yourprofile</a>
-  </p>
-</div>
-  
   <footer>
     © 2026 Min Nguyen • GitHub Pages
   </footer>
@@ -345,6 +270,3 @@ https://github.com/blijminnetje/blijminnetje.github.io/blob/main/resume/Min_Nguy
 </div>
 </body>
 </html>
-
-
-
