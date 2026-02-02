@@ -12,5 +12,5 @@ Conducted regression analysis on sleep-related data to examine relationships bet
 - Interpreted coefficients, diagnostics, and assumptions
 - Summarized findings using statistical tables and insights
 
-📄 **Full report:**  
-[View PDF](../../reports/STAT643_Sleep_Regression_Analysis.pdf)
+📄 Full technical report:  
+https://github.com/blijminnetje/blijminnetje.github.io/blob/main/reports/Sleep_Regression_Analysis_SAS.pdf
